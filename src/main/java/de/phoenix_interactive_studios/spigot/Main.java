@@ -25,7 +25,7 @@ public class Main extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
 
-        String Join = getConfig().getString("Quit");
+        String Join = getConfig().getString("Join");
         Join = Join.replace("%player%", event.getPlayer().getName());
 
         String Prefix = getConfig().getString("Prefix");
