@@ -25,7 +25,13 @@ public class Main extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
 
-        event.setJoinMessage(getConfig().getString("Prefix") + getConfig().getString("JoinSymbol") + ChatColor.GOLD + event.getPlayer().getName() + getConfig().getString("Join"));
+        String Join = getConfig().getString("Quit");
+        Join = Join.replace("%player%", event.getPlayer().getName());
+
+        String Prefix = getConfig().getString("Prefix");
+
+        event.setJoinMessage(ChatColor.translateAlternateColorCodes('&', Prefix + Join));
+
         event.getPlayer().sendTitle(ChatColor.DARK_GREEN + "Willkommen, ", ChatColor.GREEN + event.getPlayer().getName(), 10, 70, 20);
         event.getPlayer().playSound(event.getPlayer().getLocation(), Sound.ENTITY_PLAYER_LEVELUP, 1.0f, 1.0f);
     }
@@ -33,7 +39,13 @@ public class Main extends JavaPlugin implements Listener {
     @EventHandler
     public void onPlayerQuit(PlayerQuitEvent event) {
 
-        event.setQuitMessage(getConfig().getString("Prefix") + getConfig().getString("QuitSymbol") + ChatColor.GOLD + event.getPlayer().getName() + getConfig().getString("Quit"));
+        String Quit = getConfig().getString("Quit");
+        Quit = Quit.replace("%player%", event.getPlayer().getName());
+
+        String Prefix = getConfig().getString("Prefix");
+
+        event.setQuitMessage(ChatColor.translateAlternateColorCodes('&', Prefix + Quit));
+
     }
 
     @EventHandler

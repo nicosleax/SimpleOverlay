@@ -1,9 +1,8 @@
 ## Chat Prefix ##
 Prefix: "&5Phoenix Interactive Studios &8&l| "
 
-## Join Messange ##
-Join: "&7has joined the game."
-JoinSymbol: "&2&l+ "
-## Join Messange ##
-Quit: "&7has leave the game."
-QuitSymbol: "%4%l- "
+## Join Message ##
+Join: "&2&l+  &6%player% &7has joined the game."
+
+## Quit Message ##
+Quit: "%4%l- &6%player% &7has leave the game."
