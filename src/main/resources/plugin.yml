@@ -1,0 +1,5 @@
+main: de.phoenix_interactive_studios.spigot.Main
+name: BetterGameSwitcher
+version: '1.0.0'
+authors:
+  - nicosleax
